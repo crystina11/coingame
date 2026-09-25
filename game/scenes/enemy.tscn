@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://cc0enemy01"]
+
+[ext_resource type="Script" path="res://scripts/enemy.gd" id="1_en"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hit"]
+size = Vector2(14, 11)
+
+[node name="Enemy" type="CharacterBody2D"]
+collision_layer = 8
+collision_mask = 1
+script = ExtResource("1_en")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -2)
+
+[node name="HitArea" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitArea"]
+position = Vector2(0, -2)
+shape = SubResource("RectangleShape2D_hit")
