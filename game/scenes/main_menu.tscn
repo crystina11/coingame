@@ -1,0 +1,111 @@
+[gd_scene load_steps=3 format=3 uid="uid://cc0menu0001"]
+
+[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_mn"]
+[ext_resource type="Texture2D" path="res://assets/sprites/ui/logo_coin.png" id="2_lc"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mn")
+
+[node name="BG" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.11, 0.09, 0.16, 1)
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -200.0
+offset_top = 34.0
+offset_right = 200.0
+offset_bottom = 66.0
+theme_override_colors/font_color = Color(1, 0.88, 0.4, 1)
+theme_override_font_sizes/font_size = 28
+horizontal_alignment = 1
+text = "COIN COLLECTOR"
+
+[node name="Subtitle" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -200.0
+offset_top = 66.0
+offset_right = 200.0
+offset_bottom = 80.0
+theme_override_colors/font_color = Color(0.75, 0.75, 0.9, 1)
+theme_override_font_sizes/font_size = 11
+horizontal_alignment = 1
+text = "an incremental pixel adventure - every sprite & sound generated in Python"
+
+[node name="Logo" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -24.0
+offset_top = -110.0
+offset_right = 24.0
+offset_bottom = -62.0
+texture = ExtResource("2_lc")
+stretch_mode = 4
+
+[node name="Buttons" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -90.0
+offset_top = -20.0
+offset_right = 90.0
+offset_bottom = 90.0
+theme_override_constants/separation = 8
+
+[node name="PlayBtn" type="Button" parent="Buttons"]
+custom_minimum_size = Vector2(180, 26)
+layout_mode = 2
+theme_override_font_sizes/font_size = 13
+text = "PLAY"
+
+[node name="SkinsBtn" type="Button" parent="Buttons"]
+custom_minimum_size = Vector2(180, 26)
+layout_mode = 2
+theme_override_font_sizes/font_size = 13
+text = "SKINS"
+
+[node name="StatsBtn" type="Button" parent="Buttons"]
+custom_minimum_size = Vector2(180, 26)
+layout_mode = 2
+theme_override_font_sizes/font_size = 13
+text = "STATS"
+
+[node name="WipeBtn" type="Button" parent="Buttons"]
+custom_minimum_size = Vector2(180, 26)
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "RESET SAVE"
+
+[node name="Footer" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -18.0
+theme_override_colors/font_color = Color(0.6, 0.6, 0.7, 1)
+theme_override_font_sizes/font_size = 9
+horizontal_alignment = 1
+text = "Godot 4 - procedural build"
